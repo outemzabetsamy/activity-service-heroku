@@ -1,0 +1,61 @@
+package com.sw.activite.entity;
+
+import java.sql.Blob;
+
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Lob;
+@Entity
+public class Activite {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+private Long id;
+	@Column
+private String nomActivite;
+	
+	@Column
+private Blob photoActivite;
+	@Column
+private String descriptionActivite;
+public Activite() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+public Activite(Long id, String nomActivite, Blob photoActivite, String descriptionActivite) {
+	super();
+	this.id = id;
+	this.nomActivite = nomActivite;
+	this.photoActivite = photoActivite;
+	this.descriptionActivite = descriptionActivite;
+}
+
+public Long getId() {
+	return id;
+}
+public void setId(Long id) {
+	this.id = id;
+}
+public String getNomActivite() {
+	return nomActivite;
+}
+public void setNomActivite(String nomActivite) {
+	this.nomActivite = nomActivite;
+}
+public Blob getPhotoActivite() {
+	return photoActivite;
+}
+public void setPhotoActivite(Blob photoActivite) {
+	this.photoActivite = photoActivite;
+}
+public String getDescriptionActivite() {
+	return descriptionActivite;
+}
+public void setDescriptionActivite(String descriptionActivite) {
+	this.descriptionActivite = descriptionActivite;
+}
+
+}
