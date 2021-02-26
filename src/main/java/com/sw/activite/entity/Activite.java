@@ -18,14 +18,14 @@ private Long id;
 private String nomActivite;
 	
 	@Column
-private Blob photoActivite;
+private String photoActivite;
 	@Column
 private String descriptionActivite;
 public Activite() {
 	super();
 	// TODO Auto-generated constructor stub
 }
-public Activite(Long id, String nomActivite, Blob photoActivite, String descriptionActivite) {
+public Activite(Long id, String nomActivite, String photoActivite, String descriptionActivite) {
 	super();
 	this.id = id;
 	this.nomActivite = nomActivite;
@@ -45,10 +45,10 @@ public String getNomActivite() {
 public void setNomActivite(String nomActivite) {
 	this.nomActivite = nomActivite;
 }
-public Blob getPhotoActivite() {
+public String getPhotoActivite() {
 	return photoActivite;
 }
-public void setPhotoActivite(Blob photoActivite) {
+public void setPhotoActivite(String photoActivite) {
 	this.photoActivite = photoActivite;
 }
 public String getDescriptionActivite() {
