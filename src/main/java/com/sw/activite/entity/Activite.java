@@ -21,16 +21,19 @@ private String nomActivite;
 private String photoActivite;
 	@Column
 private String descriptionActivite;
+	@Column
+private String numeroTelephone;
 public Activite() {
 	super();
 	// TODO Auto-generated constructor stub
 }
-public Activite(Long id, String nomActivite, String photoActivite, String descriptionActivite) {
+public Activite(Long id, String nomActivite, String photoActivite, String descriptionActivite,String numeroTelephone) {
 	super();
 	this.id = id;
 	this.nomActivite = nomActivite;
 	this.photoActivite = photoActivite;
 	this.descriptionActivite = descriptionActivite;
+	this.numeroTelephone = numeroTelephone;
 }
 
 public Long getId() {
@@ -56,6 +59,12 @@ public String getDescriptionActivite() {
 }
 public void setDescriptionActivite(String descriptionActivite) {
 	this.descriptionActivite = descriptionActivite;
+}
+public String getNumeroTelephone() {
+	return numeroTelephone;
+}
+public void setNumeroTelephone(String numeroTelephone) {
+	this.numeroTelephone = numeroTelephone;
 }
 
 }
